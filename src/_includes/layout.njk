@@ -19,9 +19,16 @@
                     z-index: 2;
                     color: $l-fg;
                     box-sizing: border-box;
-                    padding: 0;
-                    margin: 0 auto;
-                    width: 100%;
+                    width: 90%;
+                    text-align: center;
+                }
+                header > nav {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    align-content: center;
+                    padding: 0.5em;
+                    background-color: $l-bg;
                 }
                 main {
                     z-index: -1;
@@ -45,6 +52,7 @@
     </head>
     <body>
         <header>{% include "header.njk" %}</header>
+        <br />
         <main>{{ content | safe }}</main>
     </body>
 </html>

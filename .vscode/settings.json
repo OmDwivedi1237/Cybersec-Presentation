@@ -7,5 +7,24 @@
     "markdownlint.config": {
         "no-inline-html": false,
         "single-h1": false,
-    }
+        "no-trailing-punctuation": false
+    },
+    "cSpell.words": [
+        "denosass",
+        "lume",
+        "metas",
+        "Minix",
+        "sassify",
+        "Yavor"
+    ],
+    "html-css-class-completion.HTMLLanguages": [
+        "html",
+        "nunjucks",
+        "markdown",
+    ],
+    "emmet.includeLanguages": {
+        "html": "html",
+        "nunjucks": "html",
+        "markdown": "html",
+    },
 }

@@ -11,7 +11,6 @@ const site = lume({src: './src'});
 
 site.use(metas());
 
-
 const compileSass = (input: string) => sass(input, { style: "compressed", load_paths: ["src/_styles/"] }).to_string()
 
 site.filter("sassify", (value) => compileSass(value));
