@@ -1,0 +1,10 @@
+metas:
+  site: Cyber Security Presentation
+  lang: en
+
+mergedKeys:
+  metas: object
+
+layout: layout.njk
+css:
+  - main

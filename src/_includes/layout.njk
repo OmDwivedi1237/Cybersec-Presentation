@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <style lang="scss">
+            {% set css %}
+                $l-fg: #000;
+                $d-fg: #FFF;
+                $l-bg: #FFF;
+                $d-bg: #000;
+
+                :root {
+                    font-family: monospace;
+                    color-scheme: light dark;
+                }
+                header {
+                    position: fixed;
+                    top: 0;
+                    z-index: 2;
+                    color: $l-fg;
+                    box-sizing: border-box;
+                    padding: 0;
+                    margin: 0 auto;
+                    width: 100%;
+                }
+                main {
+                    z-index: -1;
+                }
+                button > a {
+                    text-decoration: none;
+                    color: $l-fg;
+                }
+                @media (prefers-color-scheme: dark) {
+                    header {
+                        color: $d-fg;
+                    }
+                    button > a {
+                        text-decoration: none;
+                        color: $d-fg;
+                    }
+                }
+            {% endset %}
+            {{ css | sassify | safe }}
+        </style>
+    </head>
+    <body>
+        <header>{% include "header.njk" %}</header>
+        <main>{{ content | safe }}</main>
+    </body>
+</html>

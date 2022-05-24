@@ -1,2 +1,5 @@
 # Cybersec-Presentation
-Some random shit for our STEAM final project
+Watsup. This is some rando shit for our project.
+
+
+No need to read this just check out the website ig :)
