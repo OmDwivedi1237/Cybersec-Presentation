@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
         <meta charset="utf-8">
+				<link rel="preconnect" href="https://unpkg.com">
+				<link rel="preload" href="https://unpkg.com/open-props" as="style" type="text/css" crossorigin="">
+				<link rel="preload" href="https://unpkg.com/github-markdown-css" as="style" type="text/css" crossorigin="">
         <style lang="scss">
             
-            :root{font-family:monospace;color-scheme:light dark}header{position:fixed;top:0;z-index:2;color:#000;box-sizing:border-box;width:90%;text-align:center}header>nav{display:flex;justify-content:space-between;align-items:center;align-content:center;padding:.5em;background-color:#FFF}main{z-index:-1}button>a{text-decoration:none;color:#000}@media (prefers-color-scheme: dark){header{color:#FFF}button>a{text-decoration:none;color:#FFF}}
+            @import "https://unpkg.com/github-markdown-css";:root{color-scheme:light dark;font-family:monospace}img{width:10rem}header{z-index:2;color:#000;box-sizing:border-box;width:90%;text-align:center;position:fixed;top:0}header>nav{background-color:#fff;place-content:center space-between;align-items:center;padding:.5em;display:flex}main{z-index:-1}.big{font-size:1.5em!important}button>a{color:#000;text-decoration:none}@media (prefers-color-scheme:dark){header{color:#fff}button>a{color:#fff;text-decoration:none}}
         </style>
     <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cyber Security Presentation">
@@ -24,39 +27,93 @@
 
 </header>
         <br>
-        <main><h1>Our Cyber Security Presentation</h1>
+        <main class="markdown-body"><h1>Hello</h1>
+<p>I am the om yes the om that ya know probably annoys you in classes with linux
+talk :)</p>
+<p><img src="https://avatars.githubusercontent.com/u/80004184?v=4" alt="Om's face"></p>
+<p>And I am the sexy and amazing person you all know as yavko, yes YAVKO</p>
+<p><img src="https://github.com/yavko.png" alt="Yavko's face"></p>
+<h1>Our Cyber Security Presentation</h1>
 <blockquote>
 <p>By Yavor the manjaro plebian and Om the chad fedora user</p>
 </blockquote>
-<p>Today we will go over 2 topic we want ya'll to know about:
-- why linux gud
-- why VPNs aren't all that are advertised as</p>
+<p>Today we will go over 2 topic we want ya'll to know about: - why linux gud - why
+VPNs aren't all that are advertised as</p>
 <hr>
 <h2>Lets start with linux!</h2>
-<p>Linux® is a free and open source unix-like kernel, which is the like the root of every operating system. Linux® was created a free and open source re-implementation of the Minix kernel, Minix was a closed source UNIX® operating system. In combination with a user space like GNU or Busybox, Linux® is a complete operating system.</p>
+<p>Linux® is a free and open source unix-like kernel, which is the like the root of
+every operating system. Linux® was created a free and open source
+re-implementation of the Minix kernel, Minix was a closed source UNIX® operating
+system. In combination with a user space like GNU or Busybox, Linux® is a
+complete operating system.</p>
 <blockquote>
-<p>remember that linux is unix-like not a uppercase unix system, uppercase unix systems are officially licensed by UNIX®.</p>
+<p>remember that linux is unix-like not a uppercase unix system, uppercase unix
+systems are officially licensed by UNIX®.</p>
 </blockquote>
-<h2>Now before you go on talking about how its just Om and Yavor blaberring on about linux just hear me out ;)</h2>
+<p class="big">Now before you go on talking about how its just Om and Yavor blabbering on about linux just hear me out 😉</p>
 <h2>Why Linux is <strong>actually</strong> better</h2>
-<p>Well for one linux® is free and open source, others like windows and mac are closed source, and totally not free software.</p>
-<p>The other thing is that it's way faster. Lets think of this logicaly, an OS uses system resources to run. A OS like MS Windows uses so many resources to run that it makes the system slower. This also goes for Mac. Linux on the other hand uses less resources to run itself making it faster.</p>
-<p>Linux can virtually run on anything, It can on the potatoest of potato systems. Linux runs in all the servers of the websites, social media, you car, your nearest food online ordering system.</p>
-<p>If you main tension is over "will my software work on linux?" trust me it probably will. Most games that you might play from Steam will run on linux since Valve® was super nice enough to make a compatibility layer to run our steam games on Linux.</p>
-<h2>Okay now that we have talked about linux</h2>
-<h3>VPN time!</h3>
+<p>Well for one linux® is free and open source, others like windows and mac are
+closed source, and totally not free software.</p>
+<p>The other thing is that it's way faster. Lets think of this logically, an OS uses
+system resources to run. A OS like MS Windows uses so many resources to run that
+it makes the system slower. This also goes for Mac. Linux on the other hand uses
+less resources to run itself making it faster.</p>
+<p>Linux can virtually run on anything, It can on the potatoest of potato systems. Linux runs in all the servers of the websites, social media, you car, you nearest food online ordering system.</p>
+<p>In terms of security, Linux would still stay at top. The whole concept of open source is a more secure and better developmental model. Mr. Torvalds explained that open source program development creates more branches to the tree which leads to more checks and balances, better decisions, more efficient merging of new ideas and a stronger, faster and more secure program. You build a better community by empowering everyone in the community. The idea of an community building software is in itself a great idea. If someone was to find a backdoor in linux they would just simply fix it and merge it. Attempts to create backdoors have been made by people (mostly NSA) but the nature of community made backdoors passing through impossible.</p>
+<p>The second reason is that the web browser is separate from the OS so that means no Back doors.</p>
+<p>The third reason is the 8 LSM that are implemented to keep linux secure.</p>
+<h2>LSM's are Linux Security Modules (which is pretty self explanatory)</h2>
+<h2>SELINUX</h2>
+<p>SELinux is attribute-based which means the security identifiers for files are stored in extended file attributes in the file system. For example, you can use ls -Z to see the security context on /bin/bash.</p>
+<h3>SMACK – SIMPLIFIED MANDATORY ACCESS CONTROL</h3>
+<p>Unlike SELinux, SMACK was designed for embedded systems and to be simpler to administer. SMACK is the default MAC implementation in Automotive Grade Linux and Tizen.
 <br>
+<br></p>
+<h3>APPARMOR</h3>
+<p>AppArmor is another MAC implementation which was originally developed by Immunix and merged into the kernel as part of the 2.6.36 release. AppArmor is the primary MAC implementation on Debian-based systems. The most notable difference between AppArmor and SELinux, besides the reduced tooling and complexity, is that it is path-based and not attribute-based.</p>
+<h3>TOMOYO</h3>
+<p>TOMOYO is designed to protect embedded systems by allowing security administrators to record all user-mode process interactions during testing, which can then be used to generate policies that restrict interactions to only those seen during development / testing. When systems protected with TOMOYO are placed in the hands of untrusted users or in hostile environments, the user-mode processes should then be constrained to only perform previously observed actions, simplifying policy generation.</p>
+<h3>LOADPIN</h3>
+<p>Security that is easy to use is more likely to be used, and LoadPin can simplify the process of protecting the kernel from malicious modules for certain types of embedded systems.</p>
+<h3>YAMA</h3>
+<p>It currently supports reducing the scope of the ptrace() system call so that a successful attack on one of a user’s running processes cannot use ptrace to extract sensitive information from other processes running as the same user.</p>
+<h3>SAFESETID</h3>
+<p>SafeSetID, merged in Linux 5.1, is an LSM used to restrict UID/GID transitions from a given UID/GID to only those approved by a system-wide whitelist. Learn more <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/admin-guide/LSM/SafeSetID.rst?h=v5.4-rc6#n34">here</a></p>
+<h3>LOCKDOWN LSM</h3>
+<p>When lockdown is enabled, a kernel command-line parameter can be used to lockdown the kernel for integrity or confidentiality. When lockdown is set to integrity, features that allow userspace to modify the kernel are disabled.</p>
+<p>I could give many other examples such as the security competitions where hackers were able to hack Windows and Mac but no one was able to crack Linux even after millions of dollars in prizes for cracking Linux none of the hackers were able to do it.</p>
+<p>Another is that Windows leaves backdoors in it's OS to reduce pirating but hackers use those open doors to hack into systems. This is why you always need a anti-virus on MS Windows or Mac but never on Linux Distributions.</p>
+<p>But thats enough for right now, if you want to learn more on why windows or Mac isn't the best choice you can do some research on it through searching :)</p>
 <hr>
 <h2>Next lets go over VPNs!</h2>
-<p>A Virtual Private Network (VPN) is a network that allows you to connect to a network without the need to go through a physical connection. So like lets say you work for a company that has a network that you want to use for your work, but you don't want to go there to access all the network devices, well VPNs let you do that!</p>
+<p>A Virtual Private Network (VPN) is a network that allows you to connect to a
+network without the need to go through a physical connection. So like lets say
+you work for a company that has a network that you want to use for your work,
+but you don't want to go there to access all the network devices, well VPNs let
+you do that!</p>
 <h2>Why are these not the best for privacy?</h2>
-<p>Well for one with a VPN your privacy can be easily broken, encrypted or not you can be very easily geolocated and fingerprinted and the other is that most of the time the VPN provider keeps a lot of information about you, like every page you visit, and obviously that is not good for your privacy.</p>
+<p>Well for one with a VPN your privacy can be easily broken, encrypted or not you
+can be very easily geolocated and fingerprinted and the other is that most of
+the time the VPN provider keeps a lot of information about you, like every page
+you visit, and obviously that is not good for your privacy.</p>
 <h2>Okay so what do I use then?</h2>
-<p>Well for one you can use Tor! Or i2p though I'm not going to talk about that today.</p>
+<p>Well for one you can use Tor! Or i2p though I'm not going to talk about that
+today.</p>
 <h2>Whats Tor?</h2>
-<p>Well for one, lets set aside the misconceptions of Tor, no it isn't made for the dark web (Criminals are smart for using though), no its not illegal to use, okay now lets compare VPNs to the Tor onion service, Tor uses something called circuits, basicly like a bunch of servers that make the requests for you, well that sounds like a VPN right? Well not exactly Tor's security is on another level compared to regular VPNs, point is that Tor's security is much better than regular VPNs, and that is why Tor is the best for privacy. If you wanna research into the Tor onion service, you can find it <a href="https://torproject.org/">here</a></p>
+<p>Well for one, lets set aside the misconceptions of Tor, no it isn't made for the
+dark web (Criminals are smart for using though), no its not illegal to use, okay
+now lets compare VPNs to the Tor onion service, Tor uses something called
+circuits, basically like a bunch of servers that make the requests for you, well
+that sounds like a VPN right? Well not exactly Tor's security is on another
+level compared to regular VPNs, point is that Tor's security is much better than
+regular VPNs, and that is why Tor is the best for privacy. If you wanna research into the Tor onion service, you can find it <a href="https://torproject.org/">here</a></p>
 <h2>Examples of how VPN providers infringe privacy</h2>
 <p>Lets say the government suspects you for a crime, but you use a VPN, the VPN provider is required by law to provide you with information about you, and that information is used to identify you. Which is called a subpoena. And you might say, "what if I haven't committed any crimes lol", well the government use that as an excuse to get massive amounts of data on users. Anyways point is the fact that they have the info to give is bad.</p>
+<hr>
+<p class="big">And now you know why linux is the one you should go towards and why VPNs might not actually be as secure as you think.</p>
+<h2>Any Questions??????</h2>
+<p>We hope you liked our presentation and that you learned something from it :) Make sure to apply this knowledge in the future and keep going!!!
+lly is better that you might think.</p>
 </main>
     
 </body></html>
