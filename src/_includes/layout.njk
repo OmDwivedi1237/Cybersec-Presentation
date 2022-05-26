@@ -2,8 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+				<link rel="preconnect" href="https://unpkg.com" />
+				<link rel="preload" href="https://unpkg.com/open-props" as="style" type="text/css" crossorigin>
+				<link rel="preload" href="https://unpkg.com/github-markdown-css" as="style" type="text/css" crossorigin>
         <style lang="scss">
             {% set css %}
+								@import "https://unpkg.com/github-markdown-css";
+
                 $l-fg: #000;
                 $d-fg: #FFF;
                 $l-bg: #FFF;
@@ -13,6 +18,9 @@
                     font-family: monospace;
                     color-scheme: light dark;
                 }
+								img {
+									width: 10rem;
+								}
                 header {
                     position: fixed;
                     top: 0;
@@ -33,6 +41,9 @@
                 main {
                     z-index: -1;
                 }
+								.big {
+									font-size: 1.5em !important;
+								}
                 button > a {
                     text-decoration: none;
                     color: $l-fg;
@@ -47,12 +58,12 @@
                     }
                 }
             {% endset %}
-            {{ css | sassify | safe }}
+            {{ css | sassify | minify | safe }}
         </style>
     </head>
     <body>
         <header>{% include "header.njk" %}</header>
         <br />
-        <main>{{ content | safe }}</main>
+        <main class="markdown-body" >{{ content | safe }}</main>
     </body>
 </html>

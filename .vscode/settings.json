@@ -1,30 +1,31 @@
 {
-    "deno.enable": true,
-    "deno.lint": true,
-    "deno.unstable": true,
-    "deno.importMap": "./import_map.json",
-    "markdownlint.run": "onType",
-    "markdownlint.config": {
-        "no-inline-html": false,
-        "single-h1": false,
-        "no-trailing-punctuation": false
-    },
-    "cSpell.words": [
-        "denosass",
-        "lume",
-        "metas",
-        "Minix",
-        "sassify",
-        "Yavor"
-    ],
-    "html-css-class-completion.HTMLLanguages": [
-        "html",
-        "nunjucks",
-        "markdown",
-    ],
-    "emmet.includeLanguages": {
-        "html": "html",
-        "nunjucks": "html",
-        "markdown": "html",
-    },
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true,
+  "deno.importMap": "./import_map.json",
+  "markdownlint.run": "onType",
+  "markdownlint.config": {
+    "no-inline-html": false,
+    "single-h1": false,
+    "no-trailing-punctuation": false
+  },
+  "cSpell.words": [
+    "denosass",
+    "lume",
+    "metas",
+    "Minix",
+    "sassify",
+    "Yavor"
+  ],
+  "html-css-class-completion.HTMLLanguages": [
+    "html",
+    "nunjucks",
+    "markdown"
+  ],
+  "emmet.includeLanguages": {
+    "html": "html",
+    "nunjucks": "html",
+    "markdown": "html"
+  },
+  "dimmer.enabled": false
 }

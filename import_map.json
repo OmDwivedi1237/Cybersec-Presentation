@@ -1,6 +1,7 @@
 {
   "imports": {
     "lume/": "https://deno.land/x/lume@v1.9.0/",
-    "denosass": "https://deno.land/x/denosass@1.0.4/mod.ts"
+    "denosass": "https://deno.land/x/denosass@1.0.4/mod.ts",
+		"parcel-css": "https://unpkg.com/@parcel/css-wasm"
   }
 }

@@ -1,8 +1,8 @@
 {
-    "recommendations": [
-        "davidanson.vscode-markdownlint",
-        "denoland.vscode-deno",
-        "ginfuru.better-nunjucks",
-        "ecmel.vscode-html-css"
-    ]
+  "recommendations": [
+    "davidanson.vscode-markdownlint",
+    "denoland.vscode-deno",
+    "ginfuru.better-nunjucks",
+    "ecmel.vscode-html-css"
+  ]
 }
