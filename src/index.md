@@ -79,7 +79,7 @@ And this is how it goes down!
 5. The file is opened for the process and a new file descriptor is returned to it in user space if all security checks are successful.
 <br />
 
-!["hello"](https://images.squarespace-cdn.com/content/v1/5e1f51eb1bb1681137ea90b8/1585616703834-6WW2LXZNBZE855UPL6B0/image-asset.jpeg?format%3D1500w)
+!["pathwayimg"](https://images.squarespace-cdn.com/content/v1/5e1f51eb1bb1681137ea90b8/1585616703834-6WW2LXZNBZE855UPL6B0/image-asset.jpeg?format%3D1500w)
 
 ---
 
