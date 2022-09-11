@@ -16,7 +16,7 @@ jobs:
         - name: Install Deno
           uses: denoland/setup-deno@v1
           with:
-            deno-version: v1.22.0
+            deno-version: v1.25.2
 
         - name: Build Site
           run: deno run -A --unstable https://deno.land/x/lume/ci.ts
