@@ -11,15 +11,15 @@
     <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cyber Security Presentation">
 <meta property="og:locale" content="en">
-<meta property="og:title" content="Our Cyber Security Presentation">
-<meta property="og:description" content="Our amazing presentation about Cyber Security">
+<meta property="og:title" content="My Cyber Security Presentation">
+<meta property="og:description" content="My amazing presentation about Cyber Security">
 <meta property="og:url" content="http://localhost/">
-<meta name="twitter:title" content="Our Cyber Security Presentation">
-<meta name="twitter:description" content="Our amazing presentation about Cyber Security">
+<meta name="twitter:title" content="My Cyber Security Presentation">
+<meta name="twitter:description" content="My amazing presentation about Cyber Security">
 <meta name="twitter:card" content="summary">
-<meta itemprop="name" content="Our Cyber Security Presentation">
-<meta itemprop="description" content="Our amazing presentation about Cyber Security">
-<meta name="description" content="Our amazing presentation about Cyber Security">
+<meta itemprop="name" content="My Cyber Security Presentation">
+<meta itemprop="description" content="My amazing presentation about Cyber Security">
+<meta name="description" content="My amazing presentation about Cyber Security">
 </head>
     <body>
         <header><span>Cyber Security Presentation</span>
@@ -28,16 +28,13 @@
 </header>
         <br>
         <main class="markdown-body"><h1>Hello</h1>
-<p>I am the om yes the om that ya know probably annoys you in classes with linux
-talk :)</p>
-<p><img src="https://avatars.githubusercontent.com/u/80004184?v=4" alt="Om's face"></p>
-<p>And I am the sexy and amazing person you all know as yavko, yes YAVKO</p>
-<p><img src="https://github.com/yavko.png" alt="Yavko's face"></p>
+<p>Hello! I am Om Dwivedi and this is my presentation!
+<img src="https://avatars.githubusercontent.com/u/80004184?v=4" alt="Om's face"></p>
 <h1>Our Cyber Security Presentation</h1>
 <blockquote>
-<p>By Yavor the manjaro plebian and Om the chad fedora user</p>
+<p>By Om the chad fedora user</p>
 </blockquote>
-<p>Today we will go over 2 topic we want ya'll to know about: - why linux gud - why
+<p>Today I will go over 2 topic I want ya'll to know about: - why linux gud - why
 VPNs aren't all that are advertised as</p>
 <hr>
 <h2>Lets start with linux!</h2>
@@ -59,30 +56,65 @@ system resources to run. A OS like MS Windows uses so many resources to run that
 it makes the system slower. This also goes for Mac. Linux on the other hand uses
 less resources to run itself making it faster.</p>
 <p>Linux can virtually run on anything, It can on the potatoest of potato systems. Linux runs in all the servers of the websites, social media, you car, you nearest food online ordering system.</p>
-<p>In terms of security, Linux would still stay at top. The whole concept of open source is a more secure and better developmental model. Mr. Torvalds explained that open source program development creates more branches to the tree which leads to more checks and balances, better decisions, more efficient merging of new ideas and a stronger, faster and more secure program. You build a better community by empowering everyone in the community. The idea of an community building software is in itself a great idea. If someone was to find a backdoor in linux they would just simply fix it and merge it. Attempts to create backdoors have been made by people (mostly NSA) but the nature of community made backdoors passing through impossible.</p>
-<p>The second reason is that the web browser is separate from the OS so that means no Back doors.</p>
+<p>In terms of security, Linux would still stay at top. The whole concept of open source is a more secure and better developmental model. Mr. Torvalds explained that open source program development creates more branches to the tree which leads to more checks and balances, better decisions, more efficient merging of new ideas and a stronger, faster and more secure program. You build a better community by empowering everyone in the community. The idea of an community building software is in itself a great idea. If someone was to find a backdoor in linux they would just simply fix it and merge it. Attempts to create backdoors have been made by people (mostly NSA) but the nature of community made backdoors passing through impossible.
+<br>
+<img src="http://blog.emertxe.com/wp-content/uploads/2017/10/3-1.jpg" alt="Development Proccess" width="400" length="300"></p>
+<h1>Browser related things can be seperated from the OS</h1>
+<p>The second reason is that a kernel security module (which I will mention in a bit) completly isolates the browser from the rest of the system my containerizing the whole browser session or using cloud browsing. After tweaking the settings you can actually get the software to consider every website you visit untrusted and in the isolated enviorment you can render files remotly or "sanatized" without the need to download them.</p>
 <p>The third reason is the 8 LSM that are implemented to keep linux secure.</p>
 <h2>LSM's are Linux Security Modules (which is pretty self explanatory)</h2>
 <h2>SELINUX</h2>
-<p>SELinux is attribute-based which means the security identifiers for files are stored in extended file attributes in the file system. For example, you can use ls -Z to see the security context on /bin/bash.</p>
-<h3>SMACK – SIMPLIFIED MANDATORY ACCESS CONTROL</h3>
-<p>Unlike SELinux, SMACK was designed for embedded systems and to be simpler to administer. SMACK is the default MAC implementation in Automotive Grade Linux and Tizen.
+<p>Since SELinux is attribute-based, the security identifiers for files are kept in the file system's extended file attributes. Use ls -Z, for instance, to view the security context for /bin/bash.
 <br>
+And this is how it goes down!</p>
+<ol>
+<li>
+<p>On a file path, a user space process calls open().</p>
+</li>
+<li>
+<p>The system call is initiated, and a kernel file object is obtained using the path string. An error is returned if the parameters are wrong.</p>
+</li>
+<li>
+<p>The file permissions for discretionary access are examined. Does the requested file have permission to be opened by the current user? If not, the system call is aborted and the user receives an error.</p>
+</li>
+<li>
+<p>The LSM framework calls each of the file open hooks for the enabled LSMs if the DACs are satisfied. If a single LSM hook returns an error, the system call is ended and the user is informed of the error.</p>
+</li>
+<li>
+<p>The file is opened for the process and a new file descriptor is returned to it in user space if all security checks are successful.
 <br></p>
+</li>
+</ol>
+<p><img src="https://images.squarespace-cdn.com/content/v1/5e1f51eb1bb1681137ea90b8/1585616703834-6WW2LXZNBZE855UPL6B0/image-asset.jpeg?format%3D1500w" alt="&quot;hello&quot;"></p>
+<hr>
+<h3>SMACK – SIMPLIFIED MANDATORY ACCESS CONTROL</h3>
+<p>The second LSM developer to be merged into the Linux kernel was Simplified Mandatory Access Control (SMACK), which uses an attribute-based MAC implementation similar to SELinux (as part of the 2.6.24 release). SMACK was created for embedded systems and is easier to manage than SELinux. The MAC implementation used by Automotive Grade Linux and Tizen by default is called SMACK.</p>
+<br>
+<br>
+<hr>
 <h3>APPARMOR</h3>
-<p>AppArmor is another MAC implementation which was originally developed by Immunix and merged into the kernel as part of the 2.6.36 release. AppArmor is the primary MAC implementation on Debian-based systems. The most notable difference between AppArmor and SELinux, besides the reduced tooling and complexity, is that it is path-based and not attribute-based.</p>
+<p>Another MAC implementation is AppArmor, which was created by Immunix and integrated into the kernel with the 2.6.36 update. The main MAC implementation for Debian-based systems is AppArmor.</p>
+<p>In addition to having less complicated tooling, AppArmor differs from SELinux most noticeably in that it is path-based rather than attribute-based.</p>
+<p>There are advantages and disadvantages to path-based approaches. On the plus side, since extended attributes are not necessary for storing security context information, rules based on paths can protect files on any file system. Since the path can be saved in the profile without labeling a real file or directory, rules can also be set up for files that may not yet exist. The most frequently mentioned drawback is that numerous paths may point to the same physical file since hard links can be created. Depending on the path taken to access it, the security policy for a single file may differ, which could lead to unanticipated security gaps.</p>
+<hr>
 <h3>TOMOYO</h3>
-<p>TOMOYO is designed to protect embedded systems by allowing security administrators to record all user-mode process interactions during testing, which can then be used to generate policies that restrict interactions to only those seen during development / testing. When systems protected with TOMOYO are placed in the hands of untrusted users or in hostile environments, the user-mode processes should then be constrained to only perform previously observed actions, simplifying policy generation.</p>
+<p>Like AppArmor, TOMOYO is a path-based MAC implementation that was initially incorporated into Linux 2.6.30. To protect embedded systems, TOMOYO enables security administrators to capture all user-mode process interactions while testing. From this data, policies can be created that limit interactions to only those observed during development and testing. User-mode processes should thus be limited to just carrying out previously observed behaviors when systems secured with TOMOYO are placed in the hands of untrusted people or in hostile settings, simplifying policy generation.</p>
+<hr>
 <h3>LOADPIN</h3>
-<p>Security that is easy to use is more likely to be used, and LoadPin can simplify the process of protecting the kernel from malicious modules for certain types of embedded systems.</p>
+<p>A "minor" LSM called LoadPin, which was incorporated into Linux 4.7, makes sure that all kernel-loaded files (modules, firmware, etc.) come from the same file system and assumes that this file system is backed by a read-only device. This is meant to make embedded systems that don't require any of the infrastructure for kernel module signing or checking whether the system is set up to boot from read-only devices simpler.</p>
+<p>For some types of embedded systems, LoadPin can make the process of defending the kernel against malicious modules simpler. Security that is simple to use is more likely to be used.</p>
+<hr>
 <h3>YAMA</h3>
-<p>It currently supports reducing the scope of the ptrace() system call so that a successful attack on one of a user’s running processes cannot use ptrace to extract sensitive information from other processes running as the same user.</p>
+<p>Yama is an LSM that was integrated into Linux 3.4 and is designed to gather DAC security limitations that are system-wide but are not addressed by the core kernel. It now supports narrowing the scope of the ptrace() system function so that sensitive data from processes running as the same user cannot be extracted in the event of a successful attack on one of the user's running processes using ptrace.</p>
+<hr>
 <h3>SAFESETID</h3>
 <p>SafeSetID, merged in Linux 5.1, is an LSM used to restrict UID/GID transitions from a given UID/GID to only those approved by a system-wide whitelist. Learn more <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/admin-guide/LSM/SafeSetID.rst?h=v5.4-rc6#n34">here</a></p>
+<hr>
 <h3>LOCKDOWN LSM</h3>
-<p>When lockdown is enabled, a kernel command-line parameter can be used to lockdown the kernel for integrity or confidentiality. When lockdown is set to integrity, features that allow userspace to modify the kernel are disabled.</p>
+<p>Lockdown is an LSM that implements a "lockdown" functionality for the kernel and was merged into Linux 5.4. A kernel command-line argument can be used to lock down the kernel for integrity or secrecy when lockdown is enabled. Features that allow userspace to manipulate the kernel are disabled when lockdown is set to integrity. Included in this list are the following features: loading unsigned modules, access to /dev/mem,kmem,port, access to /dev/efi test, kexec of unsigned images, hibernation, direct PCI access, raw IO port access, raw MSR access, editing ACPI tables, direct PCMCIA CIS storage, changing serial port IO settings, unsafe module parameters, unsafe mmio, and debugfs access. All integrity protections are enabled as well as the ability for userland to extract potentially sensitive data from a system when lockdown is set to secrecy all integrity safeguards are activated, and capabilities like /proc/kcore access, usage of kprobes, use of bpf to read kernel RAM, unsafe use of perf, and use of tracefs are disabled to prevent userland from accessing potentially sensitive data from a running kernel.</p>
+<hr>
 <p>I could give many other examples such as the security competitions where hackers were able to hack Windows and Mac but no one was able to crack Linux even after millions of dollars in prizes for cracking Linux none of the hackers were able to do it.</p>
-<p>Another is that Windows leaves backdoors in it's OS to reduce pirating but hackers use those open doors to hack into systems. This is why you always need a anti-virus on MS Windows or Mac but never on Linux Distributions.</p>
+<p>Another is that Windows leaves backdoors in it's OS to reduce pirating but hackers use those backdoors to hack into systems. This is why you always need a anti-virus on MS Windows or Mac but never on Linux Distributions.</p>
 <p>But thats enough for right now, if you want to learn more on why windows or Mac isn't the best choice you can do some research on it through searching :)</p>
 <hr>
 <h2>Next lets go over VPNs!</h2>
@@ -92,7 +124,7 @@ you work for a company that has a network that you want to use for your work,
 but you don't want to go there to access all the network devices, well VPNs let
 you do that!</p>
 <h2>Why are these not the best for privacy?</h2>
-<p>Well for one with a VPN your privacy can be easily broken, encrypted or not you
+<p>Well for one with a VPN your privacy can be easily broken, encrypted or not, you
 can be very easily geolocated and fingerprinted and the other is that most of
 the time the VPN provider keeps a lot of information about you, like every page
 you visit, and obviously that is not good for your privacy.</p>
@@ -108,12 +140,17 @@ that sounds like a VPN right? Well not exactly Tor's security is on another
 level compared to regular VPNs, point is that Tor's security is much better than
 regular VPNs, and that is why Tor is the best for privacy. If you wanna research into the Tor onion service, you can find it <a href="https://torproject.org/">here</a></p>
 <h2>Examples of how VPN providers infringe privacy</h2>
-<p>Lets say the government suspects you for a crime, but you use a VPN, the VPN provider is required by law to provide you with information about you, and that information is used to identify you. Which is called a subpoena. And you might say, "what if I haven't committed any crimes lol", well the government use that as an excuse to get massive amounts of data on users. Anyways point is the fact that they have the info to give is bad.</p>
+<p>Lets say the government suspects you for a crime, but you use a VPN, the VPN provider is required by law to provide you with information about you, and that information is used to identify you. Which is called a subpoena. And you might say, "what if I haven't committed any crimes lol", well the government use that as an excuse to get massive amounts of data on users. Anyways point is the fact that they have the info to give to the government is bad.</p>
 <hr>
 <p class="big">And now you know why linux is the one you should go towards and why VPNs might not actually be as secure as you think.</p>
-<h2>Any Questions??????</h2>
-<p>We hope you liked our presentation and that you learned something from it :) Make sure to apply this knowledge in the future and keep going!!!
-lly is better that you might think.</p>
+<p>I hope you liked my presentation and that I did good on it. :)</p>
+<br>
+<br>
+<hr>
+<h2>Credits</h2>
+<p>Ruffell, S. (2020, April 3). <em>A brief tour of linux security modules.</em> Star Lab Software. Retrieved September 11, 2022, from https://www.starlab.io/blog/a-brief-tour-of-linux-security-modules</p>
+<p>emertxe_admin. “Why Is Linux More Secure than Other Operating Systems?” Emertxe, 12 Oct. 2017, www.emertxe.com/embedded/why-linux-is-more-secure-than-other-operating-systems.</p>
+<p>VPN knowledge is by me!</p>
 </main>
     
 </body></html>
