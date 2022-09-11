@@ -45,9 +45,9 @@ Linux can virtually run on anything, It can on the potatoest of potato systems. 
 
 In terms of security, Linux would still stay at top. The whole concept of open source is a more secure and better developmental model. Mr. Torvalds explained that open source program development creates more branches to the tree which leads to more checks and balances, better decisions, more efficient merging of new ideas and a stronger, faster and more secure program. You build a better community by empowering everyone in the community. The idea of an community building software is in itself a great idea. If someone was to find a backdoor in linux they would just simply fix it and merge it. Attempts to create backdoors have been made by people (mostly NSA) but the nature of community made backdoors passing through impossible. 
 <br />
-<img src="http://blog.emertxe.com/wp-content/uploads/2017/10/3-1.jpg" alt="Development Proccess"
-width="400"
-length="300"
+<img src="http://blog.emertxe.com/wp-content/uploads/2017/10/3-1.jpg" alt="Development Proccess"/>
+width="600"
+length=500"
 />
 
 
